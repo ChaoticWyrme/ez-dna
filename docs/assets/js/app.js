@@ -4,23 +4,31 @@ function process(event) {
   var mRNA = document.getElementById('mrna'); // mRNA field; codons
   var tRNA = document.getElementById('trna'); // anti-codons
   var amino = document.getElementById('amino'); // amino acids not yet implemented.
-  
+  if(mDNA.value==''&&cDNA.value==''&&mRNA.value==''&&tRNA.value='') {
+    
+  }
   event.preventDefault();
 }
 
-function DNAtRNA() { // converts DNA to RNA
+function DNAtRNA(dna) { // converts DNA to RNA
 
 }
 
-function basePair() { // base pairs strand
+function basePair(strand) { // base pairs strand
 
 }
 
-function RNAtAmino() { // turns RNA into amino acid chain.
+function RNAtAmino(rna) { // turns RNA into amino acid chain.
 
 }
 
-function AminoToProtein() { // turns amino acid chain into protein
+function findAmino(codon) {
+  if(typeof codon == 'string' && codon.length == 3) {
+    
+  }
+}
+
+function AminoToProtein() { // turns amino acid chain into protein. Probably not going to happen
 
 }
 
