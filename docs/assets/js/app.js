@@ -4,7 +4,15 @@ function process(event) {
   var mRNA = document.getElementById('mrna'); // mRNA field; codons
   var tRNA = document.getElementById('trna'); // anti-codons
   var amino = document.getElementById('amino'); // amino acids not yet implemented.
-  if(mDNA.value==''&&cDNA.value==''&&mRNA.value==''&&tRNA.value='') {
+  if(cDNA.value==''&&mRNA.value==''&&tRNA.value='') { //if mDNA is the only filled field
+    
+  } else if(mDNA.value==''&&mRNA.value==''&&tRNA.value='') {
+    
+  } else if(mDNA.value==''&&cDNA.value==''&&tRNA.value='') {
+    
+  } else if(mDNA.value==''&&cDNA.value==''&&mRNA.value=='') {
+    
+  } else {
     
   }
   event.preventDefault();
