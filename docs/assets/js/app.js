@@ -1,28 +1,108 @@
-"use strict";
+    "use strict";
 const aminoMap = {
   "a":{
-    "a":{},
-    "u":{},
-    "c":{},
-    "g":{}
+    "a":{
+      "a":"Lysine",
+      "u":"Asparagine",
+      "c":"Asparagine",
+      "g":"Lysine"
+    },
+    "u":{
+      "a":"Isoleucine",
+      "u":"Isoleucine",
+      "c":"Isoleucine",
+      "g":"START" // this is also Methionine
+    },
+    "c":{
+      "a":"Threonine", 
+      "u":"Threonine",
+      "c":"Threonine",
+      "g":"Threonine"
+    },
+    "g":{
+      "a":"Arginine",
+      "u":"Serine",
+      "c":"Serine",
+      "g":"Arginine"
+        }
   },
   "u":{
-    "a":{},
-    "u":{},
-    "c":{},
-    "g":{}
+    "a":{
+      "a":"STOP",
+      "u":"Tyrosine",
+      "c":"Tyrosine",
+      "g":"STOP"
+    },
+    "u":{
+      "a":"Leucine",
+      "u":"Phenylalanine",
+      "c":"Phenylalanine",
+      "g":"Leucine"
+    },
+    "c":{
+      "a":"Serine",
+      "u":"Serine",
+      "c":"Serine",
+      "g":"Serine"
+    },
+    "g":{
+      "a":"STOP",
+      "u":"Cysteine",
+      "c":"Cysteine",
+      "g":"Tryptophan"
+    }
   },
   "c":{
-    "a":{},
-    "u":{},
-    "c":{},
-    "g":{}
+    "a":{
+      "a":"Glutamine",
+      "u":"Histidine",
+      "c":"Histidine",
+      "g":"Glutamine"
+    },
+    "u":{
+      "a":"Leucine",
+      "u":"Leucine",
+      "c":"Leucine",
+      "g":"Leucine"
+    },
+    "c":{
+      "a":"Proline",
+      "u":"Proline",
+      "c":"Proline",
+      "g":"Proline"
+    },
+    "g":{
+      "a":"Arginine",
+      "u":"Arginine",
+      "c":"Arginine",
+      "g":"Arginine"
+    }
   },
   "g":{
-    "a":{},
-    "u":{},
-    "c":{},
-    "g":{}
+    "a":{
+      "a":"Glutamic Acid",
+      "u":"Aspartic Acid",
+      "c":"Aspartic Acid",
+      "g":"Glutamic Acid"
+        },
+    "u":{
+      "a":"Valine",
+      "u":"Valine",
+      "c":"Valine",
+      "g":"Valine"
+        },
+    "c":{
+      "a":"Alanine",
+      "u":"Alanine",
+      "c":"Alanine",
+      "g":"Alanine"
+    },
+    "g":{
+      "a":"Glycine",
+      "u":"Glycine",
+      "c":"Glycine",
+      "g":"Glycine"
+    }
   },
 }
 
