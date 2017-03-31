@@ -1,4 +1,4 @@
-    "use strict";
+"use strict";
 const aminoMap = {
   "a":{
     "a":{
@@ -104,7 +104,7 @@ const aminoMap = {
       "g":"Glycine"
     }
   },
-}
+};
 
 function process(event) {
   var mDNA = document.getElementById("mainstr").value; // main strand
@@ -113,7 +113,7 @@ function process(event) {
   var tRNA = document.getElementById("trna").value; // anti-codons
   var amino = document.getElementById("amino"); // amino acids not yet implemented.
   let filled = (mDNA != "")+(cDNA != "")+(mRNA != "")+(tRNA != ""); // # of fields with more than an empty string
-  if(filled = 1) { // one field filled
+  if(filled == 1) { // one field filled
     if(mDNA != "") {
       let dna = mDNA;
       let bp = basePair(dna);
@@ -146,7 +146,12 @@ function basePair(strand) { // base pairs strand
   }
 }
 
-function RNAtAmino(rna) { // turns RNA into amino acid chain.
+function RNAtAmino(rna,strict) { // turns RNA into amino acid chain.
+  if(strict) {
+    
+  } else {
+    
+  }
   return "";
 }
 
@@ -157,7 +162,7 @@ function findAmino(codon) {
 }
 
 function AminoToProtein() { // turns amino acid chain into protein. Probably not going to happen
-
+    
 }
 
 function StrandError(message) {
