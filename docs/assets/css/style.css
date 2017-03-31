@@ -1,0 +1,15 @@
+div#app label, div#app input {
+  display:block;
+}
+
+.hidden {
+  display:none;
+}
+
+div.errorbox {
+  background-color:red;
+  border: 1px black solid;
+}
+div.errorbox button {
+  float:right;
+}
