@@ -135,9 +135,9 @@ function DNAtRNA(dna) { // converts DNA to RNA
   return dna.replace(/t/gi,"U");
 }
 
-function basePair(strand) { // base pairs strand
+function basePair(strand, type) { // base pairs strand
   // need to check if rna or dna with str.find()
-  if(/u/i.test(strand) && !/t/i.test(strand)) {
+  if((/u/i.test(strand) && !/t/i.test(strand)) || type =="") {
     return strand.toLowerCase().replace(/u/g,"A").replace(/a/g,"U").replace(/c/g,"G").replace(/g/g,"C");
   } else if(/t/i.test(strand) && !/u/i.test(strand)) {
     return strand.toLowerCase().replace(/t/g,"A").replace(/a/g,"T").replace(/c/g,"G").replace(/g/g,"C");
@@ -157,6 +157,12 @@ function RNAtAmino(rna,strict) { // turns RNA into amino acid chain.
 
 function findAmino(codon) {
   if(typeof codon == "string" && codon.length == 3) {
+    
+  }
+}
+
+function validateGene(strand, type) { // takes string or two element array of strings and type
+  if(type === undefined) { // type not passed
     
   }
 }
