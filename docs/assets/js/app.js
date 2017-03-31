@@ -163,19 +163,24 @@ function findAmino(codon) {
 
 function validateGene(strand, type) { // takes string or two element array of strings and type
   if(type === undefined) { // type not passed
+    if((/u/i.test(strand) && !/t/i.test(strand)) || type =="") {
+      return strand.toLowerCase().replace(/u/g,"A").replace(/a/g,"U").replace(/c/g,"G").replace(/g/g,"C");
+    } else if(/t/i.test(strand) && !/u/i.test(strand)) {
+      return strand.toLowerCase().replace(/t/g,"A").replace(/a/g,"T").replace(/c/g,"G").replace(/g/g,"C");
+    } else if(/[^tu]/i.test(strand)) {
+      throw new TypeError("could be either DNA or RNA");
+    } else {
+      throw new TypeError("both DNA and RNA");
+    }
+  } else if(type.toLowerCase() === "dna") {
     
-  }
+  } else if(type.toLowerCase() === "rna") {
+    
+  } else throw new TypeError("Invalid Strand type, must be dna or rna");
 }
 
 function AminoToProtein() { // turns amino acid chain into protein. Probably not going to happen
     
-}
-
-function StrandError(message) {
-  this.name = "StrandError";
-  if(message) {
-    this.message = message;
-  } else this.message = "Invalid DNA/RNA strand";
 }
 
 function init() {
