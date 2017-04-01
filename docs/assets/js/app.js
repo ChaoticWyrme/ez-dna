@@ -156,26 +156,30 @@ function RNAtAmino(rna,strict) { // turns RNA into amino acid chain.
 }
 
 function findAmino(codon) {
-  if(typeof codon == "string" && codon.length == 3) {
-    
-  }
+  if(typeof codon == "string" && codon.length == 3 && !/[^augc]/i.test(codon)) {
+    cPrt = codon.split();
+  } 
 }
 
 function validateGene(strand, type) { // takes string or two element array of strings and type
   if(type === undefined) { // type not passed
     if((/u/i.test(strand) && !/t/i.test(strand)) || type =="") {
-      return strand.toLowerCase().replace(/u/g,"A").replace(/a/g,"U").replace(/c/g,"G").replace(/g/g,"C");
+      return "rna";
     } else if(/t/i.test(strand) && !/u/i.test(strand)) {
-      return strand.toLowerCase().replace(/t/g,"A").replace(/a/g,"T").replace(/c/g,"G").replace(/g/g,"C");
+      return "dna";
     } else if(/[^tu]/i.test(strand)) {
       throw new TypeError("could be either DNA or RNA");
     } else {
       throw new TypeError("both DNA and RNA");
     }
   } else if(type.toLowerCase() === "dna") {
-    
+    if(!/u/i.test(strand) {
+      return true;
+    }
   } else if(type.toLowerCase() === "rna") {
-    
+    if(!/t/i.test(strand) || type =="") {
+      return true;
+    }
   } else throw new TypeError("Invalid Strand type, must be dna or rna");
 }
 
